@@ -1,16 +1,6 @@
 import React from "react";
 
-function BottomComponent() {
-  const handleSave = () => {
-    // Add your save logic here
-    console.log("Saved to database");
-  };
-
-  const handleCancel = () => {
-    // Add your cancel logic here
-    console.log("Cancelled");
-  };
-
+function BottomComponent({ handleSave, handleCancel }) {
   return (
     <div className="flex justify-end space-x-4 p-4 bg-gray-100">
       <button

@@ -1,22 +1,6 @@
 import React, { useState } from "react";
 
-function UploadExcel() {
-  const [selectedFile, setSelectedFile] = useState(null);
-
-  const handleFileChange = (event) => {
-    setSelectedFile(event.target.files[0]);
-  };
-
-  const handleUpload = () => {
-    if (!selectedFile) {
-      alert("Please select a file before uploading.");
-      return;
-    }
-    console.log("Uploading file:", selectedFile);
-    setSelectedFile(null);
-    document.getElementById("fileInput").value = "";
-  };
-
+function UploadExcel({ handleFileChange, selectedFile, setSelectedFile }) {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
       <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-md">
@@ -43,12 +27,6 @@ function UploadExcel() {
             </p>
           )}
         </div>
-        <button
-          onClick={handleUpload}
-          className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        >
-          Upload
-        </button>
       </div>
     </div>
   );

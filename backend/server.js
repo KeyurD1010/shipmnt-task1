@@ -11,7 +11,7 @@ connectDB();
 const corOptions = {
   origin: "*",
 };
-
+// console.log("Hello");
 app.use(cors(corOptions));
 
 const PORT = process.env.PORT || 8080; //Port No from Config File

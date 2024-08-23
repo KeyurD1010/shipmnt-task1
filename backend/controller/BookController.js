@@ -64,6 +64,7 @@ export const uploadExcel = async (req, res) => {
 
 export const saveExcel = async (req, res) => {
   try {
+    console.log(req.body);
     const bookData = req.body;
 
     for (const item of bookData) {

@@ -21,6 +21,7 @@ function App() {
   };
 
   const handleSave = () => {
+    console.log(data);
     saveToDB(data)
       .then((res) => {
         console.log(res);

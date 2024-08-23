@@ -2,10 +2,17 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/databaseConfig.js";
 import BookRoutes from "./routes/BookRoutes.js";
+import cors from "cors";
 
 const app = express();
 dotenv.config();
 connectDB();
+
+const corOptions = {
+  origin: "*",
+};
+
+app.use(cors(corOptions));
 
 const PORT = process.env.PORT || 8080; //Port No from Config File
 

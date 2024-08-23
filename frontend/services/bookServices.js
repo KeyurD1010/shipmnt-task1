@@ -22,7 +22,7 @@ export const uploadExcel = async (file) => {
 
 export const saveToDB = async (data) => {
   return axios
-    .post("http://localhost:8000//api/book/saveExcel", data)
+    .post("http://localhost:8000/api/book/saveExcel", data)
     .then((response) => {
       return response.data;
     })
